@@ -1,18 +1,17 @@
-import os
 import telebot
 
-# جلب توكن التليجرام ومعرف الشات بأمان من إعدادات جيتهاب
-TOKEN = os.environ.get('TELEGRAM_TOKEN')
-CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+# ضعِ التوكن الخاص بكِ والرقم الطويل مباشرة هنا بين علامات الاقتباس
+TOKEN = "اكتبي_هنا_التوكن_الخاص_بِك_من_BotFather"
+CHAT_ID = "اكتبي_هنا_الرقم_الطويل_الخاص_بِك_من_userinfobot"
 
 bot = telebot.TeleBot(TOKEN)
 
 def send_alert():
     try:
-        # رسالة تأكيدية تفيد بأن البوت متصل بجيتهاب ويعمل بنجاح
-        message = "🤖 بوت التداول يعمل بنجاح ومستعد للتوصيل!"
+        # رسالة تأكيدية تفيد بأن البوت يعمل بنجاح
+        message = "🤖 بوت التداول يعمل بنجاح ومستعد للتوصيل الفوري!"
         bot.send_message(CHAT_ID, message)
-        print("تم إرسال الرسالة بنجاح!")
+        print("تم إرسال الرسالة بنجاح إلى تليجرام!")
     except Exception as e:
         print(f"حدث خطأ أثناء الإرسال: {e}")
 
