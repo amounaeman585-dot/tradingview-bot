@@ -1,6 +1,9 @@
-name: Fixed Bot Service
+name: start-bot
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
